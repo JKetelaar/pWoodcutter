@@ -14,13 +14,13 @@ public class RunEvent implements Strategy {
 
 	@Override
 	public boolean activate() {
-		return Boot.Method == "Banking" && !Data.bankRegionDraynor.isInRegion() && Inventory.isFull();
+		return Data.Method == "Banking" && !Data.bankRegionDraynor.isInRegion() && Data.chosenRegion.isInRegion() && Inventory.isFull();
 	}
 
 	@Override
 	public void execute() {
-		Walking.walkTo(Players.getMyPlayer().getLocation(), new Tile(3093, 3243));
-		Time.sleep(300);
+		Walking.walkTo(Players.getMyPlayer().getLocation(), Data.chosenTile);
+		Time.sleep(500);
 		while(Players.getMyPlayer().getAnimation() != -1){
 			Time.sleep(100);
 		}
