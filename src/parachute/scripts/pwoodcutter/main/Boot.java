@@ -17,7 +17,7 @@ import parachute.scripts.pwoodcutter.strategies.BankEvent;
 import parachute.scripts.pwoodcutter.strategies.CommandEvent;
 import parachute.scripts.pwoodcutter.strategies.CutEvent;
 import parachute.scripts.pwoodcutter.strategies.RunEvent;
-@ScriptManifest(author = "parachute", category = Category.WOODCUTTING, description = "Cuts willows then uses the ::empty command", name = "pWoodcutter", servers = { "Ikov" }, version = 1.0)
+@ScriptManifest(author = "parachute", category = Category.WOODCUTTING, description = "Currently only supports Draynor Willows", name = "pWoodcutter", servers = { "Ikov" }, version = 2.0)
 public class Boot extends Script implements Paintable {
 	private final ArrayList<Strategy> strategies = new ArrayList<Strategy>();
 	public static String Method = "";
