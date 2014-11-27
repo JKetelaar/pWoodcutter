@@ -14,7 +14,7 @@ import parachute.scripts.pwoodcutter.main.Data;
 public class CommandEvent implements Strategy {
 	@Override
 	public boolean activate() {
-		return Inventory.isFull() && Boot.Method == "Empty";
+		return Inventory.isFull() && Data.Method == "Empty";
 	}
 
 	@Override
