@@ -15,7 +15,7 @@ public class NestEvent implements Strategy {
 	@Override
 	public boolean activate() {
 		nests = GroundItems.getNearest(Data.nestids);
-		return nests.length > 0 && !Inventory.isFull() && Boot.Method == "Banking";
+		return nests.length > 0 && !Inventory.isFull() && Data.Method == "Banking";
 	}
 
 	@Override
