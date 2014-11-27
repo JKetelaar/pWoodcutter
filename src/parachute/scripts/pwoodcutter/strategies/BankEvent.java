@@ -12,17 +12,18 @@ public class BankEvent implements Strategy {
 
 	@Override
 	public boolean activate() {
-		return Data.bankRegionDraynor.isInRegion() && Boot.Method == "Banking" && Inventory.isFull();
+		return Data.chosenBankRegion.isInRegion() && Data.Method == "Banking" && Inventory.isFull();
 	}
 
 	@Override
 	public void execute() {
 		if (Bank.isOpen()) {
 			Bank.depositAllExcept(Data.hatchetsid);
+			Time.sleep(100);
+			Bank.close();
 		} else {
 			Bank.open();
 		}
 		Time.sleep(1500);
 	}
-
 }
