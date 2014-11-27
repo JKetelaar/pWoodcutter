@@ -16,11 +16,12 @@ import org.rev317.min.accessors.Client;
 import parachute.scripts.pwoodcutter.strategies.BankEvent;
 import parachute.scripts.pwoodcutter.strategies.CommandEvent;
 import parachute.scripts.pwoodcutter.strategies.CutEvent;
+import parachute.scripts.pwoodcutter.strategies.NestEvent;
 import parachute.scripts.pwoodcutter.strategies.RunEvent;
-@ScriptManifest(author = "parachute", category = Category.WOODCUTTING, description = "Currently only supports Draynor Willows", name = "pWoodcutter", servers = { "Ikov" }, version = 2.0)
+import parachute.scripts.pwoodcutter.strategies.TeleEvent;
+@ScriptManifest(author = "parachute", category = Category.WOODCUTTING, description = "AIO woodcutter in development. Currently supports Willows and Oaks.", name = "pWoodcutter", servers = { "Ikov" }, version = 2.0)
 public class Boot extends Script implements Paintable {
 	private final ArrayList<Strategy> strategies = new ArrayList<Strategy>();
-	public static String Method = "";
 	
     private Field field;
     private Field field2;
@@ -63,6 +64,7 @@ public class Boot extends Script implements Paintable {
 		strategies.add(new BankEvent());
 		strategies.add(new RunEvent());
 		strategies.add(new NestEvent());
+		strategies.add(new TeleEvent());
 		provide(strategies);
 		return true;
 	}
