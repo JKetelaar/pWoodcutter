@@ -14,11 +14,14 @@ public class Data {
 	public static int idchosen[];
 	public static int idwillow[] = {1308, 5553, 5551, 5552};
 	public static int idoak[] = {1281};
+	public static int idyew[] = {1309};
 	
 	//Tiles
 	public static Tile chosenTile;
 	public static Tile TileDraynor = new Tile(3093, 3243);
 	public static Tile TileVarrockWest = new Tile(3253, 3421);
+	public static Tile TileSeers = new Tile(2725, 3491);
+	public static Tile TileSeersYews = new Tile(2711, 3462);
 	
 	//Items
 	public static int hatchetsid[] = {1352, 1350, 1354, 1356, 1358, 1360, 1362, 6740};
@@ -39,4 +42,8 @@ public class Data {
 	
 	public static Region totalRegionVarrockWest = new Region(new Tile(3274, 3427), new Tile(3286, 3412));
 	public static Region bankRegionVarrockWest = new Region(new Tile(3247, 3424), new Tile(3260, 3416));
+	
+	public static Region totalRegionSeers = new Region(new Tile(2701, 3499), new Tile(2732, 3451));
+	public static Region bankRegionSeers = new Region(new Tile(2721, 3498), new Tile(2730, 3489));
+
 }
