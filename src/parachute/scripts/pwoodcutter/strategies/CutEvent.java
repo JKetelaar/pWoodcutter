@@ -25,12 +25,10 @@ public class CutEvent implements Strategy {
 
 	@Override
 	public void execute() {
-		SceneObject[] chosen = SceneObjects.getNearest(Data.idchosen);
+		chosen = SceneObjects.getNearest(Data.idchosen);
 		if (chosen[0] != null) {
-			if (chosen[0].getLocation().distanceTo() < 20) {
 				chosen[0].interact(1);
 				Time.sleep(2000);
-			}
 			while (Players.getMyPlayer().getAnimation() != -1
 					&& !Inventory.isFull() && nestTrue()
 					&& chosen[0] != null && logErbij()) {
@@ -39,6 +37,7 @@ public class CutEvent implements Strategy {
 			}
 		}
 	}
+
 	
 	public boolean logErbij(){
 		int Inventory1 = Inventory.getCount();
