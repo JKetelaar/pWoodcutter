@@ -40,5 +40,15 @@ public class TeleEvent implements Strategy {
 			Mouse.getInstance().click(265, 401, true);
 			Time.sleep(3000);
 		}
+		if (Data.Location == "SYews") {
+			Mouse.getInstance().click(740, 185, true);
+			Time.sleep(1000);
+			Mouse.getInstance().click(568, 357, true);
+			Time.sleep(1000);
+			Mouse.getInstance().click(265, 384, true);
+			Time.sleep(1000);
+			Mouse.getInstance().click(260, 414, true);
+			Time.sleep(3000);
+		}
 	}
 }
