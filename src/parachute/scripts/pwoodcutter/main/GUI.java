@@ -87,7 +87,8 @@ public class GUI extends JFrame {
 		contentPane.add(cbxMethod);
 
 		final JComboBox cbxLocation = new JComboBox();
-		cbxLocation.setModel(new DefaultComboBoxModel(new String[] {"Draynor - Willows", "Varrock East - Oaks"}));
+		cbxLocation.setModel(new DefaultComboBoxModel(new String[] {
+				"Draynor - Willows", "Varrock East - Oaks", "Seers - Yews" }));
 		cbxLocation.setBounds(162, 50, 165, 25);
 		contentPane.add(cbxLocation);
 
@@ -98,8 +99,6 @@ public class GUI extends JFrame {
 		JLabel lblLocation = new JLabel("Location");
 		lblLocation.setBounds(89, 54, 55, 16);
 		contentPane.add(lblLocation);
-		
-
 
 		btnStartScript.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -108,18 +107,24 @@ public class GUI extends JFrame {
 				} else {
 					Data.Method = "Empty";
 				}
-				if (cbxLocation.getSelectedItem() == "Draynor - Willows"){
+				if (cbxLocation.getSelectedItem() == "Draynor - Willows") {
 					Data.Location = "DWillows";
 					Data.idchosen = Data.idwillow;
 					Data.chosenRegion = Data.totalRegionDraynor;
 					Data.chosenBankRegion = Data.bankRegionDraynor;
 					Data.chosenTile = Data.TileDraynor;
-				}else if(cbxLocation.getSelectedItem() == "Varrock East - Oaks"){
+				} else if (cbxLocation.getSelectedItem() == "Varrock East - Oaks") {
 					Data.Location = "VEOaks";
 					Data.idchosen = Data.idoak;
 					Data.chosenRegion = Data.totalRegionVarrockWest;
 					Data.chosenBankRegion = Data.bankRegionVarrockWest;
 					Data.chosenTile = Data.TileVarrockWest;
+				} else if (cbxLocation.getSelectedItem() == "Seers - Yews") {
+					Data.Location = "SYews";
+					Data.idchosen = Data.idyew;
+					Data.chosenRegion = Data.totalRegionSeers;
+					Data.chosenBankRegion = Data.bankRegionSeers;
+					Data.chosenTile = Data.TileSeers;
 				}
 				dispose();
 				setVisible(false);
