@@ -6,6 +6,7 @@ import org.rev317.min.api.methods.GroundItems;
 import org.rev317.min.api.methods.Inventory;
 import org.rev317.min.api.methods.Players;
 import org.rev317.min.api.methods.SceneObjects;
+import org.rev317.min.api.methods.Skill;
 import org.rev317.min.api.wrappers.GroundItem;
 import org.rev317.min.api.wrappers.SceneObject;
 
