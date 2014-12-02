@@ -6,6 +6,7 @@ import parachute.scripts.api.Region;
 
 public class Data {
 	
+
 	//Strings
 	public static String Method = "";
 	public static String Location = "";
