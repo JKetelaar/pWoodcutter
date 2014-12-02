@@ -144,7 +144,7 @@ public class Boot extends Script implements Paintable, MessageListener {
 		if (arg0.getMessage().contains("You get some")) {
 			logsCut++;
 		}
-		if (arg0.getMessage().contains("A bird nest has fallen out of the three")) {
+		if (arg0.getMessage().contains("A bird nest has fallen out of the tree")) {
 			nestsPicked++;
 		}
 
