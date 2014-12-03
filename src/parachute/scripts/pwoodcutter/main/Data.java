@@ -46,5 +46,8 @@ public class Data {
 	
 	public static Region totalRegionSeers = new Region(new Tile(2701, 3499), new Tile(2732, 3451));
 	public static Region bankRegionSeers = new Region(new Tile(2721, 3498), new Tile(2730, 3489));
+	
+	public static Region totalRegionSeersOaks = new Region(new Tile(2717, 3498), new Tile(2738, 3475));
+
 
 }
