@@ -87,8 +87,7 @@ public class GUI extends JFrame {
 		contentPane.add(cbxMethod);
 
 		final JComboBox cbxLocation = new JComboBox();
-		cbxLocation.setModel(new DefaultComboBoxModel(new String[] {
-				"Draynor - Willows", "Varrock East - Oaks", "Seers - Yews" }));
+		cbxLocation.setModel(new DefaultComboBoxModel(new String[] {"Draynor - Willows", "Varrock East - Oaks", "Seers - Yews", "Seers - Oaks"}));
 		cbxLocation.setBounds(162, 50, 165, 25);
 		contentPane.add(cbxLocation);
 
@@ -123,6 +122,12 @@ public class GUI extends JFrame {
 					Data.Location = "SYews";
 					Data.idchosen = Data.idyew;
 					Data.chosenRegion = Data.totalRegionSeers;
+					Data.chosenBankRegion = Data.bankRegionSeers;
+					Data.chosenTile = Data.TileSeers;
+				} else if (cbxLocation.getSelectedItem() == "Seers - Oaks") {
+					Data.Location = "SYews";
+					Data.idchosen = Data.idoak;
+					Data.chosenRegion = Data.totalRegionSeersOaks;
 					Data.chosenBankRegion = Data.bankRegionSeers;
 					Data.chosenTile = Data.TileSeers;
 				}
